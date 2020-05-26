@@ -1,6 +1,6 @@
 package circulo;
 
-public class Circulo {
+public class Circulo implements Comparable<Circulo> {
     private double radio;
 
     public Circulo(double radio) {
@@ -29,5 +29,13 @@ public class Circulo {
     
     }
     
-    
+    @Override
+    public int compareTo(Circulo c) {
+        if (c.getRadio() > radio) {
+            return -1;
+        } else {
+            return 1;
+        }
+    }
+   
 }
